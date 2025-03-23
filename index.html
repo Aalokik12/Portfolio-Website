@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perosnal Porfolio Website</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   
+    <header class="header">
+        <a href="#" class="logo">My Portfolio</a>
+        <i class='bx bx-menu' id="menu-icon"></i>
+        
+
+        <nav class="navbar">
+            <a href="#home" class="active">Home</a>
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+            <a href="#skills">Skills</a>
+            <a href="#experience">Experience</a> 
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <section class="home" id="home">
+        <div class="home-content">
+            <h3>Hello, I am</h3>
+            <h1>Aalokik Singh</h1>
+            <h3>And I am <span class="auto-type"></span></h3>
+            <p>B.Tech (CSAM) student at IIIT-Delhi with expertise in Machine Learning, NLP, Web Development, and Distributed Systems. Skilled in Python, C++, SQL, and various ML frameworks. Passionate about AI, innovation, and system optimization, I thrive in problem-solving, teamwork, and leadership, contributing to hackathons, tech fests, and research projects. Open to collaborations, internships, and AI/ML opportunities</p>
+            <div class="social-media">
+                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=singh23120aalokik@gmail.com" target="_blank">
+                    <i class='bx bxl-gmail'></i>
+                </a>
+                <a href="#" onclick="alert('My Contact: +91 7678526912')">
+                    <i class='bx bx-phone'></i>
+                </a>
+                
+                <a href="https://www.linkedin.com/in/aalokik-singh" target="_blank">
+                    <i class='bx bxl-linkedin-square'></i>
+                </a>
+                
+            </div>
+            <a href="https://drive.google.com/file/d/1LX3Zrn1Cl7KlGsMrhNtwpVz1u2u2ghmH/view?usp=drive_link" class="btn">Resume</a>
+            <a href="#" class="btn" onclick="copyEmail()">Copy Email</a>
+            <p id="email" style="display: none;">singh23120aalokik@gmail.com</p>
+        </div>
+        <div class="home-img">
+            <img src="profileee.png" alt="">
+        </div>
+    </section>
+
+    <section class="about" id="about">
+        <div class="about-img">
+            <img src="profileee.png" alt="">
+        </div>
+
+        <div class="about-content">
+            <h2 class="heading">About <span>Me</span></h2>
+            <h3>Aspiring Software Engineer</h3>
+            <p>I'm a B.Tech (CSAM) student at IIIT-Delhi, passionate about AI, Machine Learning, NLP, and Web Development. I love building smart solutions to real-world problems using Python, C++, SQL, and ML frameworks.</p>
+            <p>I've worked on exciting projects like ML-based voice conversion (GMMs), NLP-powered text summarization, an e-commerce platform (Python & MySQL), and a real-time weather app with API integration.</p>
+            <p>Beyond coding, I enjoy problem-solving, teamwork, and leadership, having participated in hackathons, tech fests, and research projects. I'm always eager to explore new challenges, collaborate, and innovate in AI, ML, and software engineering.</p>
+            <h3>Education</h3>
+            <p>Indraprastha Institute of Information and Technology   :  2021 - Present</p>
+            <p>Maharaja Agrasen Institute of Information and Technology  :  2020 - 2021</p>
+        </div>
+    </section>
+
+    <section class="projects" id="projects">
+        <h2 class="heading">My <span>Projects</span></h2>
+        <div class="project-container">
+            <div class="project-box">
+                <i class='bx bx-code'></i>
+                <h3>Voice Conversion Using Machine Learning Techniques</h3>
+                <p>Implemented Gaussian Mixture Models (GMMs) for voice conversion, transforming speaker voices while preserving linguistic content, using Mozilla Common Voice V14.0 and spectral feature analysis.</p>
+                <a href="https://github.com/Aalokik12/ML_Project">Github<i class='bx bx-link' ></i></a>
+                <iframe src="ML_Report.pdf" class="pdf-preview"></iframe>
+                <a href="ML_Report.pdf" download>
+                <button class="download-btn">Open Report</button>
+                </a>
+            </div>
+
+            <div class="project-box">
+                <i class='bx bx-code'></i>
+                <h3>Comprehensive Text Summarization using NLP</h3>
+                <p>Developed NLP-based methods to generate concise, coherent summaries from extensive English text. Leveraged advanced models like BART, T5, and Pegasus to retain key information while enhancing efficiency and scalability.</p>
+                <a href="https://drive.google.com/drive/folders/1Nqik0S3DZTLslahE7hrhoW0F6-UE-Dit?usp=sharing">Github<i class='bx bx-link' ></i></a>
+                <iframe src="NLP_Report.pdf" class="pdf-preview"></iframe>
+                <a href="NLP_Report.pdf" download>
+                <button class="download-btn">Open Report</button>
+                </a>
+            </div>
+
+            <div class="project-box">
+                <i class='bx bx-code'></i>
+                <h3>HyperRetail</h3>
+                <p>Developed a fully functional e-commerce website using python, mySQL, javascript, HTML.
+                    Manage and organize products using mySQL database, ensuring efficient data retrieval and manipulation.
+                    Implemented features for adding and deleting products as well as processing transactions to simulate a real time e-commerce environment.</p>
+                <a href="https://github.com/Aalokik12/Hyper-Retail-DBMS">Github<i class='bx bx-link' ></i></a>
+                <iframe src="HyperRetail_Report.pdf" class="pdf-preview"></iframe>
+                <a href="HyperRetail_Report.pdf" download>
+                <button class="download-btn">Open Report</button>
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="skills" id="skills">
+        <h2 class="heading">My <span>Skills</span></h2>
+    
+        <!-- Programming Languages -->
+        <div class="skills-box" onclick="toggleSkills('skills-programming', event)">
+            <h3>Programming Languages <i class='bx bxl-c-plus-plus' ></i> <i class='bx bxl-python' ></i></h3>
+            <div id="skills-programming" class="skills-content">
+                <ul>
+                    <li>C++, C Language</li>
+                    <li>Python, Java, JavaScript</li>
+                    <li>SQL</li>
+                </ul>
+                <span class="back" onclick="toggleSkills('skills-programming', event)">Back</span>
+            </div>
+            <span class="read-more">Read More</span>
+        </div>
+    
+        <!-- Tools & Technologies -->
+        <div class="skills-box" onclick="toggleSkills('skills-tools', event)">
+            <h3>Tools & Technologies <i class='bx bxl-github' ></i> <i class='bx bxl-visual-studio'></i></h3>
+            <div id="skills-tools" class="skills-content">
+                <ul>
+                    <li>Matlab, Google Colab, Pytorch</li>
+                    <li>Numpy, Pandas, VS Code</li>
+                    <li>Intellij, IDLE, VIM, Git/GitHub</li>
+                    <li>Artix, VirtualBox, Overleaf, Matplotlib</li>
+                </ul>
+                <span class="back" onclick="toggleSkills('skills-tools', event)">Back</span>
+            </div>
+            <span class="read-more">Read More</span>
+        </div>
+    
+        <!-- Relevant Courses -->
+        <div class="skills-box" onclick="toggleSkills('skills-courses', event)">
+            <h3>Relevant Courses <i class='bx bx-code-curly'></i> <i class='bx bxs-graduation'></i></h3>
+            <div id="skills-courses" class="skills-content">
+                <ul>
+                    <li>Data Structures and Algorithms</li>
+                    <li>Machine Learning, NLP, AI</li>
+                    <li>Operating System, DBMS, OOPs</li>
+                    <li>Distributed Systems, TOC, Computing for Medicine</li>
+                </ul>
+                <span class="back" onclick="toggleSkills('skills-courses', event)">Back</span>
+            </div>
+            <span class="read-more">Read More</span>
+        </div>
+    
+        <!-- Soft Skills -->
+        <div class="skills-box" onclick="toggleSkills('skills-soft', event)">
+            <h3>Soft Skills <i class='bx bx-edit-alt'></i></h3>
+            <div id="skills-soft" class="skills-content">
+                <ul>
+                    <li>Teamwork & Collaboration</li>
+                    <li>Effective Communication</li>
+                    <li>Critical Thinking, Problem Solving</li>
+                    <li>Leadership, Creativity</li>
+                    <li>Self-awareness & Development</li>
+                </ul>
+                <span class="back" onclick="toggleSkills('skills-soft', event)">Back</span>
+            </div>
+            <span class="read-more">Read More</span>
+        </div>
+    
+    </section>
+    
+    
+    
+    <section class="experience" id="experience">
+        <h2 class="heading">Work <span>Experience</span></h2>
+        <div class="timeline">
+            <div class="timeline-box">
+                <div class="timeline-date">
+                    <h3>May 2023 - July 2023</h3>
+                </div>
+                <div class="timeline-info">
+                    <h3>Marketing Team Intern</h3>
+                    <p class="short-description">Stubborn Factory, Saket, New Delhi</p>
+                    <p class="full-description hidden">Conducted research on colleges, identifying key clubs and societies for potential marketing outreach.
+
+                        Organized and maintained detailed information in Excel sheets to streamline data management.
+                        
+                        Collaborated with the marketing team to discuss strategies and progress.
+                        <iframe src="Aalokik Singh Offer Letter - Stubborn Factory.pdf" class="pdf-preview"></iframe>
+                        <a href="Aalokik Singh Offer Letter - Stubborn Factory.pdf" download>
+                        <button class="download-btn">Open Report</button>
+                        </a>
+                    </p>
+                    <button class="btn read-more" onclick="toggleDetails(this)">Read More</button>
+                </div>
+            </div>
+            
+
+            <div class="timeline-box">
+                <div class="timeline-date">
+                    <h3>August 2023 - September 2023</h3>
+                </div>
+                <div class="timeline-info">
+                    <h3>Ambience Team Volunteer</h3>
+                    <p class="short-description">Esya Tech Fest, Indraprastha Indtitute of Information Technology</p>
+                    <p class="full-description hidden">Designed and set up event spaces to create an engaging and visually appealing atmosphere.
+
+                        Coordinated with teams to manage decorations, lighting, and thematic elements for various event segments.
+                        
+                        Ensured seamless execution of ambience-related tasks, enhancing the overall attendee experience.</p>
+                    <button class="btn read-more" onclick="toggleDetails(this)">Read More</button>
+                </div>
+            </div>
+            
+
+            <div class="timeline-box">
+                <div class="timeline-date">
+                    <h3>January 2022 - February 2022</h3>
+                </div>
+                <div class="timeline-info">
+                    <h3>Operations Team Member</h3>
+                    <p class="short-description">Odyssey Cultural Fest, Indraprastha Indtitute of Information Technology</p>
+                    <p class="full-description hidden">Managed event handling, ensuring smooth execution of performances, competitions, and activities.
+
+                        Coordinated with various teams to handle scheduling, resource allocation, and on-ground problem-solving.
+                        
+                        Assisted in crowd management and operational support to enhance the attendee experience.</p>
+                    <button class="btn read-more" onclick="toggleDetails(this)">Read More</button>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <h2 class="heading">Contact <span>Me!</span></h2>
+    
+        <form action="https://formsubmit.co/your-email@example.com" method="POST">
+            <div class="input-box">
+                <input type="text" name="name" placeholder="Name" required>
+                <input type="email" name="email" placeholder="Email" required>
+            </div>
+    
+            <div class="input-box">
+                <input type="number" name="phone" placeholder="Phone">
+                <input type="text" name="subject" placeholder="Subject">
+            </div>
+    
+            <textarea name="message" cols="30" rows="10" placeholder="Message" required></textarea>
+            <input type="hidden" name="_captcha" value="false">
+            <input type="submit" value="Send Message" class="btn">
+        </form>
+    </section>
+    
+
+    <footer class="footer">
+        <div class="footer-text">
+            <p>Copyright &copy; 2025 by Aalokik Singh | All Rights Reserved.</p>
+        </div>
+
+        <div class="footer-iconTop">
+            <a href="#home"><i class='bx bx-up-arrow-circle' ></i></a>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var typed = new Typed(".auto-type", {
+                strings: ["Aspiring Software Engineer", "Open to Work"],
+                typeSpeed: 100,
+                backSpeed: 100,
+                loop: true
+            });
+        });
+        </script>
+
+<script>
+    function toggleDetails(button) {
+        let timelineBox = button.closest('.timeline-box');
+        let shortDesc = timelineBox.querySelector('.short-description');
+        let fullDesc = timelineBox.querySelector('.full-description');
+    
+        if (timelineBox.classList.contains('expanded')) {
+            timelineBox.classList.remove('expanded');
+            fullDesc.classList.add('hidden');
+            shortDesc.classList.remove('hidden');
+            button.innerText = "Read More";
+        } else {
+            timelineBox.classList.add('expanded');
+            fullDesc.classList.remove('hidden');
+            shortDesc.classList.add('hidden');
+            button.innerText = "Back";
+        }
+    }
+    </script>
+    <script>
+        function copyEmail() {
+            var text = document.getElementById("email").innerText;
+            navigator.clipboard.writeText(text);
+            alert("Email copied!");
+        }
+        </script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+        const sections = document.querySelectorAll("section"); // All page sections
+        const navLinks = document.querySelectorAll(".navbar a"); // Navbar links
+
+        function activateLink() {
+            let scrollY = window.scrollY;
+
+            sections.forEach(section => {
+                let sectionTop = section.offsetTop - 100;
+                let sectionHeight = section.offsetHeight;
+                let sectionId = section.getAttribute("id");
+
+                if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
+                    navLinks.forEach(link => {
+                        link.classList.remove("active");
+                        if (link.getAttribute("href") === `#${sectionId}`) {
+                            link.classList.add("active");
+                        }
+                    });
+                }
+            });
+        }
+
+        window.addEventListener("scroll", activateLink);
+    });
+
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.12.313/pdf.min.js"></script>
+    <canvas id="pdf-preview"></canvas>
+    <script>
+        const url = "your-pdf-file.pdf"; // Replace with your PDF file
+        pdfjsLib.getDocument(url).promise.then(pdf => {
+            pdf.getPage(1).then(page => {
+                const scale = 1.5;
+                const viewport = page.getViewport({ scale });
+                const canvas = document.getElementById("pdf-preview");
+                const context = canvas.getContext("2d");
+                canvas.width = viewport.width;
+                canvas.height = viewport.height;
+                page.render({ canvasContext: context, viewport });
+            });
+        });
+    </script>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
